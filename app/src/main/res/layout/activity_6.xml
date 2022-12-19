@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/app_name"
+        android:inputType="text" />
+    <Button android:id="@+id/btnAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNombre"
+        android:layout_alignParentRight="true"
+        android:text="Aceptar" />
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="#ffffff"
+        android:onClick="rPagina"
+        android:src="@drawable/arrow_collapse_left"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        tools:ignore="OnClick" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:background="#ffffff"
+        android:onClick="nPagina"
+        android:src="@drawable/arrow_collapse_right"
+        android:text="@string/button"
+        tools:ignore="OnClick"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="0,1,2">
+
+        <TableRow>
+
+            <TextView android:text=" 1.1" />
+
+            <TextView android:text=" 1.2" />
+
+            <TextView android:text=" 1.3" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text=" 2.1" />
+
+            <TextView android:text=" 2.2" />
+
+            <TextView android:text=" 2.3" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_span="2"
+                android:text=" 3 . 1 " />
+
+            <TextView android:text=" 3.2" />
+        </TableRow>
+    </TableLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity_6"></FrameLayout>
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="80dp"
+        android:text="ToggleButton"
+        android:textOff="Off"
+        android:textOn="On"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="80dp"
+        android:text="ToggleButton"
+        android:textOff="Off"
+        android:textOn="On"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/simpleSwitch"
+        android:layout_width="170dp"
+        android:layout_height="343dp" />
+
+</RelativeLayout>

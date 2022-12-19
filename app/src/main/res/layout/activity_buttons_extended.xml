@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/checkbox_meat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:text="Carne" />
+
+    <CheckBox
+        android:id="@+id/checkbox_cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:text="Queso" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Pan normal" />
+
+        <RadioButton
+            android:id="@+id/radio_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Pan integral" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu bocata es:" />
+
+    <Button
+        android:id="@+id/comprobar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprueba"
+        android:onClick="canvi"/>
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#ffffff"
+        android:onClick="rPagina"
+        android:src="@drawable/arrow_collapse_left"
+        android:layout_gravity="bottom"
+        />
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#ffffff"
+        android:onClick="nPagina"
+        android:src="@drawable/arrow_collapse_right"
+        android:text="@string/button"
+        />
+
+</LinearLayout>

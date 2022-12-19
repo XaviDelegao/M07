@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Saltar"
+        android:id="@+id/boton_saltar"
+        android:layout_gravity="center_horizontal|bottom"/>
+
+
+    <ImageButton
+        android:id="@+id/boton"
+        android:layout_width="286dp"
+        android:layout_height="255dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:src="@mipmap/realms" />
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:onClick="rPagina"
+        android:src="@drawable/arrow_collapse_left"
+        tools:ignore="OnClick" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:background="#ffffff"
+        android:onClick="nPagina4"
+        android:src="@drawable/arrow_collapse_right"
+        android:text="@string/button"
+        tools:ignore="OnClick"
+        android:layout_gravity="end"/>
+
+</FrameLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Formulari"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    tools:context="Formulari">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REGISTRO"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/nom"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:drawableStart="@drawable/user"
+                android:ems="10"
+                android:hint="    Ingrese su nombre"
+                android:inputType="text"
+                android:textColorHint="@color/xakeblue" />
+
+            <EditText
+                android:id="@+id/apellido"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:drawableStart="@drawable/user"
+                android:ems="10"
+                android:hint="    Ingrese su apellido"
+                android:inputType="text"
+                android:textColorHint="@color/yelow" />
+
+            <EditText
+                android:id="@+id/telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textColorHint="@color/pinki"
+                android:hint="         Telefono"
+                android:drawableStart="@drawable/phone"/>
+
+            <EditText
+                android:id="@+id/correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="       Correo Electrónico"
+                android:textColorHint="@color/magenta"
+                android:drawableStart="@drawable/mail"
+                />
+
+            <EditText
+                android:id="@+id/direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="       Escriba su direccion"
+                android:textColorHint="@color/teal_700"
+                android:drawableStart="@drawable/adress"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_TD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner_sexe"
+        android:layout_width="152dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/sexe"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/spinner_cargo"
+        android:entries="@array/sexe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/input_cognom"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <ImageButton
+        android:id="@+id/enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:onClick="nPagina"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/imprt" />
+
+
+    <TextView
+        android:id="@+id/textDades"
+        android:layout_width="369dp"
+        android:layout_height="92dp"
+        android:text="PROTECCIÓN DE DATOS: Conforme a lo establecido en el Artículo 13 del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo y la Ley Orgánica 3/2018 de 5 de diciembre (LOPDGDD), le informamos que los datos personales recabados del propio interesado."
+        android:textColor="@color/black" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:background="#ffffff"
+        android:onClick="nPagina8"
+        android:src="@drawable/arrow_collapse_right"
+        android:text="@string/button" />
+
+</LinearLayout>
