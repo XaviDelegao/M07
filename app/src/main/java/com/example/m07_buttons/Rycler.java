@@ -1,9 +1,13 @@
 package com.example.m07_buttons;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -12,32 +16,28 @@ import java.util.List;
 
 public class Rycler extends AppCompatActivity {
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_rycler);
 
-        rycler();
 
-    }
-
-
-   public void rycler(){
        RecyclerView recycler = findViewById(R.id.recyclerView);
        List<Data> data = new ArrayList<>();
 
-       data.add(new Data("Xavier Rodirguez", R.drawable.kfc));
-       data.add(new Data("Aichi Sendou", R.drawable.kfc));
-       data.add(new Data("Xavier Rodirguez", R.drawable.kfc));
-       data.add(new Data("Aichi Sendou", R.drawable.kfc));
+        for (int i = 1; i < 100; i++) {
+            data.add(new Data("Resultat #" + i + " ", R.drawable.kfc));
 
-       recycler.setHasFixedSize(true);
+        }
 
+
+        recycler.setLayoutManager(new GridLayoutManager(this,2));
        MyAdapter adapter = new MyAdapter(this, data);
-
-       LinearLayoutManager lm = new LinearLayoutManager(getApplicationContext());
-       lm.setOrientation(LinearLayoutManager.VERTICAL);
-       recycler.setLayoutManager(lm);
+        recycler.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        recycler.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
+        recycler.setItemAnimator(new DefaultItemAnimator());
        recycler.setAdapter(adapter);
+
    }
 }

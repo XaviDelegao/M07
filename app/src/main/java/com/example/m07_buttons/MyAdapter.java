@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,7 +40,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.viewHolder> {
         holder.addData(data,position);
         int img = data.get(position).getImageID();
         holder.foto.setImageResource(img);
-
+        Animation animation = AnimationUtils.loadAnimation(holder.itemView.getContext(), android.R.anim.slide_in_left);
+        holder.itemView.startAnimation(animation);
     }
 
     @Override

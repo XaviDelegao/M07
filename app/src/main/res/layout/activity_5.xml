@@ -52,15 +52,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#0E8AEE" />
 
-    <ImageButton
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="#ffffff"
-        android:onClick="rPagina"
-        android:src="@drawable/arrow_collapse_left"
-        android:layout_gravity="left"
-         />
 
     <ImageButton
         android:id="@+id/button2"
